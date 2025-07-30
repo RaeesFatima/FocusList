@@ -24,7 +24,7 @@ def add():
         })
     return redirect(url_for('hello_world'))
 
-@app.route('/delete/<int:task_id>')
+@app.route('/delete/<int:task_id>', methods=['POST'])
 def delete(task_id):
     tasks.pop(task_id)
     return redirect(url_for('hello_world'))
